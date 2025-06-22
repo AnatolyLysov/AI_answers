@@ -24,4 +24,3 @@ Or undo this operation with:
 Turn off this advice by setting config variable advice.detachedHead to false
 
 HEAD is now at dbbd02f  Please enter the commit message for your changes. Lines starting  with '#' will be ignored, and an empty message aborts the commit.
-
