@@ -1,30 +1,3 @@
-https://github.com/AnatolyLysov/Poker
-
-git remote add Poker https://github.com/AnatolyLysov/Poker.git
-
-
-git fetch Poker
-
-git checkout Poker/main
-Note: switching to 'Poker/main'.
-
-You are in 'detached HEAD' state. You can look around, make experimental
-changes and commit them, and you can discard any commits you make in this
-state without impacting any branches by switching back to a branch.
-
-If you want to create a new branch to retain commits you create, you may
-do so (now or later) by using -c with the switch command. Example:
-
-  git switch -c <new-branch-name>
-
-Or undo this operation with:
-
-  git switch -
-
-Turn off this advice by setting config variable advice.detachedHead to false
-
-HEAD is now at dbbd02f  Please enter the commit message for your changes. Lines starting  with '#' will be ignored, and an empty message aborts the commit.
------------------------------------
 vulkaninfo - Summarize Vulkan information in relation to the current environment.
 
 USAGE: 
@@ -59,7 +32,3 @@ OPTIONS:
 [--show-tool-props] Show the active VkPhysicalDeviceToolPropertiesEXT that vulkaninfo finds.
 [--show-formats]    Display the format properties of each physical device.
                     Note: This only affects text output.
-
-
-vulkaninfo -o <filename> | --output <filename>
-aikidance@aikidance:~/AI_answers/vulkan$ vulkaninfo -o vulkaninfo.txt
