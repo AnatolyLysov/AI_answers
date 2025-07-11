@@ -63,3 +63,8 @@ OPTIONS:
 
 vulkaninfo -o <filename> | --output <filename>
 aikidance@aikidance:~/AI_answers/vulkan$ vulkaninfo -o vulkaninfo.txt
+------------------------------------
+to delete write protected file(directtory)
+
+sudo rm -r <dir>
+------------------
