@@ -161,10 +161,10 @@
 ---
 
 Let me know if you need help with specific Git commands!
-*/```
+```
 
 
-/*Here are some **specific Git commands** based on common scenarios:
+Here are some **specific Git commands** based on common scenarios:
 
 ---
 
