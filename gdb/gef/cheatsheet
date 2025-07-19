@@ -1,4 +1,4 @@
-GDB/GEF Cheatsheet
+""" GDB/GEF Cheatsheet
 Quick command reference on one of the most powerful tools for dynamic analysis.
 
 This is a curated collection of GDB/GEF commands which I find incredibly useful for dynamic analysis and reverse engineering. These are mainly personal notes and may be incomplete, but suggestions are welcome! If there's a useful GDB/GEF command you use that's not on this list, do leave a comment or let me know so that I can add it. :)
@@ -440,4 +440,4 @@ gef config context.enable 0
 
 Enable Context
 
-gef config context.enable 1
+gef config context.enable 1 """
