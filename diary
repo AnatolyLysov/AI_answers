@@ -68,3 +68,10 @@ to delete write protected file(directtory)
 
 sudo rm -r <dir>
 ------------------
+ASSEMBLER
+
+sudo apt update
+sudo apt install build-essential gdb nasm
+----
+info file : writing_and_debugging
+
