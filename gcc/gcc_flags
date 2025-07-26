@@ -1,0 +1,105 @@
+When using `gcc` (the GNU Compiler Collection) to compile C and C++ programs, there are numerous flags (or options) you can use to control the behavior of the compiler. Here are some commonly used `gcc` flags:
+
+### Compilation Flags
+
+1. **Basic Flags:**
+   - `-o <file>`: Specify the output file name.
+   - `-c`: Compile source files into object files (`.o`) without linking.
+   - `-S`: Compile source files into assembly code (`.s`).
+   - `-E`: Preprocess source files and output the result.
+
+2. **Optimization Flags:**
+   - `-O0`: No optimization (default).
+   - `-O1`: Optimize for speed without increasing compilation time significantly.
+   - `-O2`: Further optimizations for speed (recommended for production).
+   - `-O3`: Even more aggressive optimizations.
+   - `-Os`: Optimize for size.
+   - `-Ofast`: Disregard strict standards compliance (includes `-O3`).
+
+3. **Warning Flags:**
+   - `-Wall`: Enable all standard warnings.
+   - `-Wextra`: Enable additional warnings not covered by `-Wall`.
+   - `-Werror`: Treat warnings as errors.
+   - `-Wpedantic`: Issue warnings for language standard violations.
+
+4. **Debugging Flags:**
+   - `-g`: Generate debug information for use with a debugger (e.g., `gdb`).
+   - `-g3`: Generate debug information with extra verbosity (includes macro definitions).
+
+5. **Language Standards:**
+   - `-std=<standard>`: Specify the language standard to use (e.g., `-std=c99`, `-std=c11`, `-std=c++17`).
+
+6. **Linking Flags:**
+   - `-l<library>`: Link against a library (e.g., `-lm` for the math library).
+   - `-L<directory>`: Specify a directory to search for libraries.
+
+7. **Preprocessor Flags:**
+   - `-D<macro>`: Define a macro (e.g., `-DDEBUG`).
+   - `-I<directory>`: Add a directory to the list of directories to be searched for header files.
+
+8. **Architecture and Target Flags:**
+   - `-m32`: Compile for a 32-bit architecture.
+   - `-m64`: Compile for a 64-bit architecture.
+   - `-march=<arch>`: Specify the target architecture (e.g., `-march=native`).
+
+9. **Other Useful Flags:**
+   - `-fPIC`: Generate position-independent code (useful for shared libraries).
+   - `-static`: Link statically (no dynamic libraries).
+   - `-pthread`: Enable multi-threading support.
+
+### Example Usage
+
+Here’s an example of how you might compile a C program with some of these flags:
+
+```bash
+gcc -Wall -O2 -g -o my_program my_program.c -lm
+```
+
+In this command:
+- `-Wall` enables all standard warnings.
+- `-O2` applies optimization for speed.
+- `-g` includes debug information.
+- `-o my_program` specifies the output file name.
+- `my_program.c` is the source file being compiled.
+- `-lm` links against the math library.
+
+### Conclusion
+
+These are just a few of the many flags available in `gcc`. You can view the complete list of options by running `man gcc` in your terminal or by checking the official GCC documentation online.
+----------------------------------
+GCC(1)                                                                                GNU                                                                                GCC(1)
+
+NAME
+       gcc - GNU project C and C++ compiler
+
+SYNOPSIS
+       gcc [-c|-S|-E] [-std=standard]
+           [-g] [-pg] [-Olevel]
+           [-Wwarn...] [-Wpedantic]
+           [-Idir...] [-Ldir...]
+           [-Dmacro[=defn]...] [-Umacro]
+           [-foption...] [-mmachine-option...]
+           [-o outfile] [@file] infile...
+
+       Only the most useful options are listed here; see below for the remainder.  g++ accepts mostly the same options as gcc.
+
+DESCRIPTION
+       When you invoke GCC, it normally does preprocessing, compilation, assembly and linking.  The "overall options" allow you to stop this process at an intermediate stage.
+       For example, the -c option says not to run the linker.  Then the output consists of object files output by the assembler.
+
+       Other options are passed on to one or more stages of processing.  Some options control the preprocessor and others the compiler itself.  Yet other options control the
+       assembler and linker; most of these are not documented here, since you rarely need to use any of them.
+
+       Most of the command-line options that you can use with GCC are useful for C programs; when an option is only useful with another language (usually C++), the explanation
+       says so explicitly.  If the description for a particular option does not mention a source language, you can use that option with all supported languages.
+
+       The usual way to run GCC is to run the executable called gcc, or machine-gcc when cross-compiling, or machine-gcc-version to run a specific version of GCC.  When you
+       compile C++ programs, you should invoke GCC as g++ instead.
+
+       The gcc program accepts options and file names as operands.  Many options have multi-letter names; therefore multiple single-letter options may not be grouped: -dv is
+       very different from -d -v.
+
+       You can mix options and other arguments.  For the most part, the order you use doesn't matter.  Order does matter when you use several options of the same kind; for
+       example, if you specify -L more than once, the directories are searched in the order specified.  Also, the placement of the -l option is significant.
+
+       Many options have long names starting with -f or with -W---for example, -fmove-loop-invariants, -Wformat and so on.  Most of these have both positive and negativeq
