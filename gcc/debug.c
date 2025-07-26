@@ -30,18 +30,19 @@ continue
 
 8. Exit the Debugger
 When you are done debugging, you can exit the debugger with:
-quit*/
+quit
 //////////////////////////////////////////////
-/*1. Compile with Debugging Information
+// Compile with Debugging Information
 Use the -g flag when compiling the program to include debugging symbols. This allows you to use 
 a debugger like gdb.
-*/
+
 gcc -g -o pokergame pokergame.c card.c deck.c -lm
-/*2. Use a Debugger (e.g., gdb)
-Start debugging with gdb:*/
+
+// Use a Debugger (e.g., gdb)
+//Start debugging with gdb:
  gdb ./pokergame
- /*Common gdb Commands:
-Run the program*/
+ //Common gdb Commands:
+///Run the program
 run <arguments>
 //Example:
 run 10
@@ -52,3 +53,4 @@ break <function_name>
 //Step through code:
 next: Step over a function call.
 step: Step into a function call.
+*/
